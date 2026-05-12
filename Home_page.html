@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Term Project</title>
+    <link rel="stylesheet" type="text/css" href="Home.css">
+</head>
+<body>
+    <nav>
+        <strong>Menu</strong>
+        
+        <ul>
+        <li><a href="Home_page.html">Home Page</a> </li>
+	    <li><a href="Meet_the_Team.html">Meet the Team</a></li>
+        <li><a href="Info_Page.html">Game Overview</a></li> 
+        <li><a href="Team_and_Players.html">Teams & Players</a></li> 
+        <li><a href="Events.html">Events</a></li>
+        <li><a href="Careers.html">Careers In E-SPORTS</a></li>
+        </ul>
+        
+    </nav>
+
+    <h1 style="text-align: center;">Welcome to the E-Sports Hub</h1>
+
+    <p style="text-align: center;">
+        <a href="Home_page.html">Home Page</a> &nbsp;&nbsp;
+        <a href="Meet_the_Team.html">Meet the Team</a> &nbsp;&nbsp;
+        <a href="Info_Page.html">Game Overview</a> &nbsp;&nbsp;
+        <a href="Team_and_Players.html">Teams & Players</a> &nbsp;&nbsp;
+        <a href="Events.html">Events</a> &nbsp;&nbsp;
+        <a href="Careers.html">Careers In E-SPORTS</a>
+    </p>
+
+    <hr>
+
+    <p style="text-align: center;">
+        <a id="randomImageLink" href="#">
+            <img id="randomImage" src= "CODMW.jpg" width="1000" height="450" alt="Random Image">
+        </a>
+    </p>
+
+    <script>
+        var pictures = ["CODMW", "COD", "CODWZ", "CODMW3", "CODBlackOps6"];
+        var links = [
+            "http://www.callofduty.com/modernwarfare",
+            "http://www.callofduty.com",
+            "https://www.callofduty.com/warzone",
+            "https://www.callofduty.com/store/games/modernwarfare3",
+            "https://www.callofduty.com/blackops"
+        ];
+
+        function displayRandomImage() {
+            var randomIndex = Math.floor(Math.random() * pictures.length);
+            var randomImage = `${pictures[randomIndex]}.jpg`; 
+            document.getElementById("randomImage").src = randomImage;
+            document.getElementById("randomImageLink").href = links[randomIndex];
+        }
+
+        window.onload = function () {
+            displayRandomImage();
+            setInterval(displayRandomImage, 2000);
+        };
+    </script>
+<p>
+ <p style="text-align: center;">
+        
+	   <strong> <a href="https://www.callofduty.com/mobile/esports">Mobile Championships</a> &nbsp;&nbsp;
+        <a href="https://www.callofdutyleague.com/en-us/">Call of Duty League</a>&nbsp;&nbsp;
+        <a href="https://www.callofduty.com/mobile">COD Apple/Google</a>&nbsp;&nbsp;
+        <a href="https://www.callofduty.com/warzonemobile">CODMW Apple/Google</a></strong>
+    </p>
+
+
+
+</body>
+</html>

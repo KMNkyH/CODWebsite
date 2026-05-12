@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call of Duty E-Sports Hub</title>
+    <link rel="stylesheet" type="text/css" href="Team_and_Players.css">
+</head>
+<body>
+
+    <nav>
+        <strong>Menu</strong>
+        <ul>
+        <li><a href="Home_page.html">Home Page</a> </li>
+	    <li><a href="Meet_the_Team.html">Meet the Team</a></li>
+        <li><a href="Info_Page.html">Game Overview</a></li> 
+        <li><a href="Team_and_Players.html">Teams & Players</a></li> 
+        <li><a href="Events.html">Events</a></li>
+        <li><a href="Careers.html">Careers In E-SPORTS</a></li>
+        </ul>
+    </nav>
+
+    <h1 style="text-align: center;">Welcome to the E-Sports Hub</h1>
+
+    <p style="text-align: center;">
+        <a href="Home_page.html">Home Page</a> &nbsp;&nbsp;
+        <a href="Meet_the_Team.html">Meet the Team</a> &nbsp;&nbsp;
+        <a href="Info_Page.html">Game Overview</a> &nbsp;&nbsp;
+        <a href="Team_and_Players.html">Teams & Players</a> &nbsp;&nbsp;
+        <a href="Events.html">Events</a> &nbsp;&nbsp;
+        <a href="Careers.html">Careers in E-Sports</a>
+    </p>
+
+    <hr>
+    <section id="Atlanta_Faze">
+        <h2>Atlanta FaZe</h2>
+        <p>
+            Atlanta FaZe is one of the most successful teams in the Call of Duty League. Known for their relentless aggression and strategic mastery, they are a powerhouse in the competitive scene.<br>
+            <strong>Location:</strong> Atlanta, Georgia<br>
+            <strong>Key Players:</strong> Simp, aBeZy, Cellium, SlasheR<br>
+            <strong>Achievements:</strong> Multiple CDL Championships, MVP Awards, and a dominant win rate.
+        </p>
+        <img id="atlantaFazeImg" src="atlanta_faze_logo.jpg" alt="Atlanta FaZe Logo">
+       
+    </section>
+    
+    <hr>
+    
+    <section id="Toronto_Ultra">
+        <h2>Toronto Ultra</h2>
+        <p>
+            The Toronto Ultra are a team driven by passion and innovation. They consistently showcase their talent with strategic gameplay and exceptional teamwork.<br>
+            <strong>Location:</strong> Toronto, Canada<br>
+            <strong>Key Players:</strong> Beans, Cleanx, Insight, Joedeceives<br>
+            <strong>Achievements:</strong> Multiple CDL Winnings, fan awards, and recognition for their spirited performances.
+        </p>
+        <img id="torontoUltraImg" src="Toronto_Ultra_logo.jpg" alt="Toronto Ultra Logo">
+
+        
+    </section>
+    
+    <hr>
+    
+    <section id="OpTic_Texas">
+        <h2>OpTic Texas</h2>
+        <p>
+            OpTic Texas is a legendary team in the Call of Duty League with a rich history of success. Renowned for their loyal fan base and iconic players, they remain a formidable force.<br>
+            <strong>Location:</strong> Dallas, Texas<br>
+            <strong>Key Players:</strong> Scump (Retired), Dashy, Shotzzy, iLLeY<br>
+            <strong>Achievements:</strong> CDL Championship titles, X Games gold medals, and groundbreaking performances in esports history.
+        </p>
+       <img id="opticTexasImg" src="optic_texas_logo.jpg" alt="OpTic Texas Logo">
+        
+    </section>
+    
+    
+
+    <script>
+        // Define arrays of image sources for each team
+        var atlantaFazeImages = [
+            "atlanta_faze_logo.jpg",
+            "simp.jpg",
+            "abezy.jpg",
+            "cellium.jpg",
+            "drazah.jpg"
+        ];
+
+        var torontoUltraImages = [
+            "Toronto_Ultra_logo.jpg",
+            "beans.jpg",
+            "cleanx.jpg",
+            "insight.jpg",
+            "joedeceives.jpg"
+        ];
+
+        var opticTexasImages = [
+            "optic_texas_logo.jpg",
+            "dashy.jpg",
+            "shotzzy.jpg",
+            "illey.jpg"
+        ];
+
+        // Function to cycle through images
+        function cycleImages(sectionId, imageArray, imgElementId) {
+            let index = 0;
+            setInterval(() => {
+                document.getElementById(imgElementId).src = imageArray[index];
+                index = (index + 1) % imageArray.length;
+            }, 3000); // Change image every 3 seconds
+        }
+
+        // Call the function for each team
+        cycleImages("Atlanta_Faze", atlantaFazeImages, "atlantaFazeImg");
+        cycleImages("Toronto_Ultra", torontoUltraImages, "torontoUltraImg");
+        cycleImages("OpTic_Texas", opticTexasImages, "opticTexasImg");
+    </script>
+
+</body>
+</html>
